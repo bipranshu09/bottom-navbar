@@ -1,0 +1,114 @@
+:root{
+    --main-color:hsl(184, 100%, 50%);
+    --lighter-color:#f7f7ff;
+    --dark-color:#2f3542;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.0;
+    color: var(--dark-color);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+nav {
+    position: fixed;
+    bottom: 1px;
+    width: 455px;
+    background-color: var(--lighter-color);
+    left: 50%;
+    margin-left: -220px;
+    padding: 0 1.3rem;
+    
+    box-shadow: rgb(50 50 93 / 25% ) 0 50px 100px -20px,
+                    rgb(0 0 0 / 30% ) 0 30px 60px -30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+} 
+
+nav :where(li,a) {
+    position: relative;
+}
+
+nav ul li a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    width: 80px;
+    height: 80px;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+    letter-spacing: 1px;
+}   
+
+nav ul li a:hover{
+    color: var(--main-color);
+    transition: 0.2s;
+}
+nav ul li a span{
+    font-size: 10px;
+}
+nav li.active a::before, nav li.active a::after{
+    content: '';
+    position: absolute;
+    background-color: var(--main-color);
+    z-index: -1;
+}
+
+section > div {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    font-size: 2.5rem;
+    color: var(--lighter-color);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+ 
+section > div:nth-child(1) {
+    background-color: blue;
+}
+section > div:nth-child(2) {
+    background-color: rgb(101, 255, 12);
+}
+section > div:nth-child(3) {
+    background-color: rgb(230, 124, 161);
+}
+section > div:nth-child(4) {
+    background-color: rgb(227, 13, 166);
+}
+section > div:nth-child(5) {
+    background-color: rgb(255, 149, 0);
+}
+
+
